@@ -58,18 +58,38 @@ public class Control extends javax.swing.JFrame {
         btn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/derecha.png"))); // NOI18N
         btn2.setBorderPainted(false);
         btn2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/derechap.png"))); // NOI18N
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
 
         btn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/abajo.png"))); // NOI18N
         btn3.setBorderPainted(false);
         btn3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/abajop.png"))); // NOI18N
+        btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3ActionPerformed(evt);
+            }
+        });
 
         btn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/izquierda.png"))); // NOI18N
         btn4.setBorderPainted(false);
         btn4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/izquierdap.png"))); // NOI18N
+        btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4ActionPerformed(evt);
+            }
+        });
 
         btn5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/action.png"))); // NOI18N
         btn5.setContentAreaFilled(false);
         btn5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/accionp.png"))); // NOI18N
+        btn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,7 +134,15 @@ public class Control extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        try{
+            String msgout = "ar";
+            dout.writeUTF(msgout);
+        }catch (Exception e){
+            
+        }
+        System.out.println("Has presionado la flecha superior");
         /*
+        
         try{
             JSONObject obj = new JSONObject();
             obj.put("boton", "arriba");
@@ -130,6 +158,41 @@ public class Control extends javax.swing.JFrame {
         }
             */
     }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        try{
+            String msgout = "de";
+            dout.writeUTF(msgout);
+        }catch (Exception e){
+            
+        }
+        System.out.println("Has presionado la flecha derecha");
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        try{
+            String msgout = "ab";
+            dout.writeUTF(msgout);
+        }catch (Exception e){
+            
+        }
+        System.out.println("Has presionado la flecha inferior");
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+        try{
+            String msgout = "iz";
+            dout.writeUTF(msgout);
+        }catch (Exception e){
+            
+        }
+        System.out.println("Has presionado la flecha izquierda");
+    }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        //NO hace nada en snake
+        System.out.println("Has presionado el boton de accion");
+    }//GEN-LAST:event_btn5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -169,12 +232,9 @@ public class Control extends javax.swing.JFrame {
             s  = new Socket("127.0.0.1",1200);
             din = new DataInputStream(s.getInputStream());
             dout = new DataOutputStream(s.getOutputStream());
-            //String msgin = "";
+            String msgin = ""; 
             
-            while(true){
-                
-            }   
-                    
+            dout.writeUTF(msgin);
             
         }catch (Exception e){
             

@@ -82,7 +82,7 @@ public class PanelSnake extends JPanel{
             }
         }    
         if (existe){
-            JOptionPane.showMessageDialog(this, "Has perdido el juego");
+            JOptionPane.showMessageDialog(this, "Has perdido el juego, tuviste: "+snake.size()+" Puntos");
         }
         else{
             if(nuevo[0]==comida[0] && nuevo[1]==comida[1]){

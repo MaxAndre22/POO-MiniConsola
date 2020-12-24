@@ -95,6 +95,9 @@
           <Image iconType="3" name="/Imagenes/derechap.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn3">
       <Properties>
@@ -106,6 +109,9 @@
           <Image iconType="3" name="/Imagenes/abajop.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn4">
       <Properties>
@@ -117,6 +123,9 @@
           <Image iconType="3" name="/Imagenes/izquierdap.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn5">
       <Properties>
@@ -128,6 +137,9 @@
           <Image iconType="3" name="/Imagenes/accionp.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn5ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
