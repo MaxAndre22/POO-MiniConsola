@@ -12,13 +12,17 @@ package Control;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import Control.Conexion;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Cliente extends Conexion
 {
     public Cliente() throws IOException{super("cliente");} //Se usa el constructor para cliente de Conexion
 
+    
     public void startClient() //Método para iniciar el cliente
     {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         try
         {
             //Flujo de datos hacia el servidor
@@ -28,7 +32,8 @@ public class Cliente extends Conexion
             for (int i = 0; i < 2; i++)
             {
                 //Se escribe en el servidor usando su flujo de datos
-                salidaServidor.writeUTF("Este es el mensaje número " + (i+1) + "\n");
+                String mensaje= br.readLine();
+                salidaServidor.writeUTF(mensaje);
             }
 
             cs.close();//Fin de la conexión
@@ -39,4 +44,6 @@ public class Cliente extends Conexion
             System.out.println(e.getMessage());
         }
     }
+    
+
 }
